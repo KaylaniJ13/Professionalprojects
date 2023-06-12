@@ -1,0 +1,459 @@
+/*  
+Author: Kaylani James 
+File Name: styles.css
+Date: 02/12/2023
+*/
+
+/*CSS Reset*/
+
+body, header, nav, main, footer, img, h1, h3, figure, figcaption, video, aside
+{
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Style rules for header*/
+
+
+header{
+	padding:30px;
+	text-align:center;
+	background-color: #f1f1f1;
+  font-size: 35px;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+h1{
+	font-size: 3em;
+	font-family: 'Pacifico', cursive;
+}
+
+/*Style rules for body,images, and videos*/
+body
+{
+  font-family: 'Open Sans', sans-serif;
+	background-color: #33ccff;
+  background-image: linear-gradient(to bottom right, #33ccff, #ff99cc);
+  margin:0;
+}
+
+div.center{
+	display:flex;
+	justify-content:center;
+}
+
+img, video
+{
+  max-width: 100%;
+  display: block;
+  border-radius: 25px;
+  border: 2px solid #2alf14;
+  padding: 20px;
+  width: 500px;
+  height: 550px;
+  text-align: center;
+  position:center;
+  object-fit:cover;
+}
+
+.column {
+  float: center;
+  width: 50%;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Style rules for navigation area*/
+
+nav
+{
+float: center;
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  background:#2a1f14;
+}
+
+
+/*Style rules for main content*/
+
+main{
+  padding: 2%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main p{
+  font-size: 1.25em;
+}
+
+main h2{
+	font-size: 2em;
+}
+
+main h3{
+  padding-top: 2%;
+  font-size: 1em;
+}
+
+main ul{
+  list-style-type: square;
+}
+
+footer{
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*Style rules for class and id selectors*/
+
+.link{
+  color:#4d3319;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+#contact{
+  text-align: center;
+}
+.grid{
+	display:grid;
+	grid-template-columns: auto auto;
+	grid-gap:10px;
+}
+
+aside{
+	grid-column: 1/ span 2;
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rules to show mobile class and hide tab-desk class */
+.mobile {
+    display: block;
+	border-radius: 25px;
+}
+
+.tab-desk {
+    display: none;
+}
+
+/* Style rules for header area */
+.mobile h1, .mobile h3 {
+    padding: 2%;
+    text-align: center;
+}
+
+.mobile h1 {
+    font-family: 'Emblema One', cursive;
+}
+
+.mobile h3 {
+    font-family: 'Lora', serif;
+}
+/* Media Query for Tablet Viewport*/
+@media only screen and (min-width: 620px), print {
+  /*Tablet Viewport: Show tab-desk class, hide mobile class*/
+  .tab-desk{
+    display:block;
+  }
+  .mobile{
+    display: none;
+  }
+  /*Tablet Viewport: Style rules for nav area*/
+  nav li{
+    border-top: none;
+    display:inline-block;
+    font-size: 1.25em;
+  }
+  nav li a{
+    padding: 0.5em;
+  }
+
+}
+
+/*Media Query for Desktop Viewport*/
+@media only screen and (min-width: 1000px), print {
+
+/*Desktop Viewport: Style rules for nav area*/
+nav li {
+  font-size: 1.5em;
+}
+
+nav li a {
+  padding: 0.5em 1.5em;
+}
+
+nav li a:hover {
+  color: #2a1f14;
+  background-color: #f6eee4;
+}
+
+/*Desktop Viewport: Style rules for main content*/
+  #info ul{
+    margin-left: 5%;
+  }
+  /* Desktop Viewport: Style rules for form elements */
+    
+    form {
+      width: auto;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 20px;
+    }
+	.btn {
+      grid-column: 1 / span 2;
+    }
+}
+
+/*Media Query for Large Desktop Viewports*/
+@media only screen and (min-width:1921px) {
+  
+  #wrapper{
+    width: 1920px;
+    margin: 0 auto;
+  }
+  main{
+    background-color: #f6eee4;
+  }
+
+	.container{
+		display:none;
+	}
+}
+
+.grid{
+   display: grid;
+   grid-template-columns: auto auto;
+   grid-gap: 10px;
+ }
+ section{
+   grid-column: 1/span 2;
+   text-shadow: 4px 4px 10px #c5a687;
+ }
+ 
+ /* Style rules for form elements */
+
+fieldset, input, textarea {
+    margin-bottom: 2%;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+label {
+    display: block;
+    padding-top: 2%;
+}
+
+form #submit {
+    margin: 0 auto;
+    display: block;
+    padding: 2%;
+    background-color: #78593a;
+    color: #f6eee4;
+    font-size: 1.25em;
+    border-radius: 10px;
+}
+ 
+ table {
+        border: 10px solid #2a1f14;
+        margin: 0 auto;
+        border-collapse: collapse;
+		text-align:center;
+		padding:10px;
+		object-fit:cover;
+    }
+	
+tr:hover {background-color: coral;}
+
+td{
+	text-align:center;
+}
+   /*Style rules for menu function*/
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
